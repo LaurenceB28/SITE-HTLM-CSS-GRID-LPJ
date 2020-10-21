@@ -1,0 +1,253 @@
+body {
+    background-color: #000000;
+}
+
+#header {
+    background-color: #000000;
+    height: 200px;
+    width: 100%;
+}
+
+nav {
+    min-width: 500px;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    background-color: #4b4b4b;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    padding-top: 30px;
+
+}
+
+li a {
+    color: #000000;
+    text-decoration: none;
+
+}
+
+
+
+nav ul li a:hover {
+    color: white;
+    background-color: #4b4b4b;
+}
+
+#slide {
+    background-color: #ffffff;
+    height: 400px;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.grid{
+    margin-left: 150px;
+    margin-right: 150px;
+	
+	display: grid;
+
+
+	gap: 20px 20px;
+	grid-template-areas:
+	  "PhotoArtiste paragraphe1"
+	  "paragraphe2 oldman"
+	  "papillon2 paragraphe3"
+	  "mariage mariage"
+	  "Prestations Prestations"
+	  "paragraphe4 paragraphe4";
+  }
+
+img {
+	width: 100%;
+	/* height: auto; */
+
+}
+
+.PhotoArtiste { 
+	grid-area: PhotoArtiste; 
+}
+/*.Presentation {
+	grid-area: Presentation; */
+}
+.paragraphe1 {
+	grid-area: paragraphe1; 
+}
+.oldman { 
+	grid-area: oldman; 
+}
+/*.leNoiretBlanc {
+	 grid-area: leNoiretBlanc; 
+	}*/
+.paragraphe2 { 
+	grid-area: paragraphe2; 
+}
+.papillon2 { 
+	grid-area: papillon2; 
+}
+/*.Actualités { 
+	grid-area: Actualités; 
+}*/
+.paragraphe3 { 
+	grid-area: paragraphe3; 
+}
+.mariage { 
+	grid-area: mariage; 
+}
+/*.Prestations { 
+	grid-area: Prestations; 
+}*/
+.paragraphe4 { 
+	grid-area: paragraphe4; 
+}*/
+
+
+h2 {
+    color: #ffffff;
+
+}
+
+
+.paragraphe1 {
+    color: #ffffff
+
+}
+
+.paragraphe2 {
+    color: #ffffff
+
+}
+
+.paragraphe3 {
+    color: #ffffff
+
+}
+
+.paragraphe4 {
+    color: #ffffff
+
+}
+
+
+form {
+    background-color: #ffffff;
+    height: 400px;
+    width: 100%;
+    margin-top: 200px;
+
+}
+
+#footer {
+    background-color: #000000;
+    height: 60px;
+}
+
+#footer p {
+    color: #ffffff;
+    font-weight: bold;
+    position: relative;
+    top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+/*formulaire*/
+
+form{
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap ;
+    /* margin: 50px; */
+
+}
+#hamac {
+    background-image: url(../IMG/fond\ formulaire.jpeg);
+    background-size: cover;
+
+}
+
+.nom{
+    
+    width: 350px;
+    height: 40px;
+    margin-top: 75px;
+    margin-left: 95px;
+    
+}
+
+.telephone{
+    width: 870px;
+    height: 40px;
+    margin-top: 75px;
+    margin-left: 60px;
+    
+}
+
+.prenom{
+    width: 350px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 95px;
+    
+}
+
+.mail{
+    width: 870px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 60px;
+
+}
+
+.adresse{
+    width: 1300px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 95px;
+
+}
+
+.codePostal{
+    width: 350px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 95px;
+}
+
+.ville{
+    width: 865px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 60px;
+
+}
+
+.demande{
+    margin-top: 5px;
+    margin-left: 800px;
+    padding: 20px;
+
+}
+
+.bouton{
+    width: 140px;
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 1280px;
+    margin-bottom: 5px;
+    background-color: #535353;
+    border-radius: 20px;
+    color: #ffffff;
+
+}
+
+input{
+    padding-left: 20px;
+}
