@@ -1,15 +1,53 @@
 body {
     background-color: #000000;
 }
-
 #header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     background-color: #000000;
     height: 200px;
     width: 100%;
 }
 
+header img {
+    width: 150px;
+    height: 150px;
+    padding: 25px;
+}
+
+header div {
+    text-align: center;
+    font-size: x-large;
+}
+
+#JohnCook {
+    margin-bottom: 0;
+    margin-top: 57px;
+}
+
+#Photographe {
+    color: #4b4b4b;
+    margin: 0;
+    font-size: smaller;
+}
+
+#social {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 100%;
+    flex-basis: 70%;
+}
+
+header div img {
+    width: 40px;
+    height: 40px;
+}
+
 nav {
-    min-width: 500px;
+    margin: 0;
+    min-width: 300px;
     width: 100%;
     height: 80px;
     position: relative;
@@ -17,129 +55,293 @@ nav {
 }
 
 nav ul {
+    margin: 0;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
     list-style-type: none;
     padding-top: 30px;
-
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 li a {
     color: #000000;
     text-decoration: none;
-
 }
-
-
 
 nav ul li a:hover {
     color: white;
     background-color: #4b4b4b;
 }
 
-#slide {
-    background-color: #ffffff;
-    height: 400px;
-    width: 100%;
-    margin-top: 25px;
+@keyframes slidy {
+    0% {
+        left: 0%;
+    }
+
+    20% {
+        left: 0%;
+    }
+
+    25% {
+        left: -100%;
+    }
+
+    45% {
+        left: -100%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    70% {
+        left: -200%;
+    }
+
+    75% {
+        left: -300%;
+    }
+
+    95% {
+        left: -300%;
+    }
+
+    100% {
+        left: -400%;
+    }
 }
 
-.grid{
-    margin-left: 150px;
-    margin-right: 150px;
-	
-	display: grid;
-
-
-	gap: 20px 20px;
-	grid-template-areas:
-	  "PhotoArtiste paragraphe1"
-	  "paragraphe2 oldman"
-	  "papillon2 paragraphe3"
-	  "mariage mariage"
-	  "Prestations Prestations"
-	  "paragraphe4 paragraphe4";
-  }
-
-img {
-	width: 100%;
-	/* height: auto; */
-
+div#slider {
+    overflow: hidden;
 }
 
-.PhotoArtiste { 
-	grid-area: PhotoArtiste; 
+div#slider figure img {
+    width: 10%;
+    float: left;
 }
-/*.Presentation {
-	grid-area: Presentation; */
-}
-.paragraphe1 {
-	grid-area: paragraphe1; 
-}
-.oldman { 
-	grid-area: oldman; 
-}
-/*.leNoiretBlanc {
-	 grid-area: leNoiretBlanc; 
-	}*/
-.paragraphe2 { 
-	grid-area: paragraphe2; 
-}
-.papillon2 { 
-	grid-area: papillon2; 
-}
-/*.Actualités { 
-	grid-area: Actualités; 
-}*/
-.paragraphe3 { 
-	grid-area: paragraphe3; 
-}
-.mariage { 
-	grid-area: mariage; 
-}
-/*.Prestations { 
-	grid-area: Prestations; 
-}*/
-.paragraphe4 { 
-	grid-area: paragraphe4; 
-}*/
 
+div#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 30s slidy infinite;
+}
 
 h2 {
+    font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
+}
 
+#socialBurger {
+    display: none;
 }
 
 
-.paragraphe1 {
-    color: #ffffff
-
-}
-
-.paragraphe2 {
-    color: #ffffff
-
-}
-
-.paragraphe3 {
-    color: #ffffff
-
-}
-
-.paragraphe4 {
-    color: #ffffff
-
+#BurgerResponsive {
+    display: none;
 }
 
 
-form {
-    background-color: #ffffff;
-    height: 400px;
-    width: 100%;
-    margin-top: 200px;
 
+ 
+
+.grille1 {
+    max-width: 1300px;
+    width: 80%;
+    height: auto;
+    margin: 30px auto;
+    /* border: 1px solid #333; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 500px);
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 50px;
+}
+
+.grid-item1 {
+    width: 500px;
+    height: 300px;
+    background-image: url(../IMG/PhotoArtiste.jpeg);
+    background-size: cover;
+    color: #ffffff;
+    font-size: 30px;
+    padding-left: 15px;
+    padding-top: 10px;
+
+}
+
+.grid-item2 {
+    width: 500px;
+    height: 225px;
+    background: #000000;
+    color: #949494;
+    padding-left: 15px;
+    font-size: 20px;
+    
+}
+
+.grid-item3 {
+    width: 500px;
+    height: 390px;
+    background: #000000;
+    color: #949494;
+    padding-top: 15px;
+    font-size: 20px;
+    
+}
+
+.grid-item4 {
+    width: 500px;
+    height: 600px;
+    background-image: url(../IMG/oldman.jpg);
+    background-size: cover;
+    color: #ffffff;
+    font-size: 40px;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.grid-item5 {
+    width: 500px;
+    height: 300px;
+    background-image: url(../IMG/papillons2.jpg);
+    background-size: cover;
+    color: #ffffff;
+    font-size: 40px;
+    padding-left: 15px;
+    padding-top: 10px;
+    
+}
+
+.grid-item6 {
+    width: 500px;
+    height: 300px;
+    background: #000000;
+    color: #949494;
+    padding-left: 15px;
+    font-size: 20px;
+
+}
+
+.grille2 {
+    max-width: 1300px;
+    width: 80%;
+    height: auto;
+    margin: 30px auto;
+    display: grid;
+    justify-content: center;
+    row-gap: 50px;
+
+}
+
+.grid-item7 {
+    width: 1010px;
+    height: 500px;
+    background-image: url(../IMG/mariage.jpg);
+    background-size: cover;
+    color: #ffffff;
+    font-size: 40px;
+    padding-left: 15px;
+    padding-top: 10px;
+    
+}
+
+.grid-item8 {
+    width: 1010px;
+    height: 300px;
+    background: #000000;
+    color: #949494;
+    padding-top: 15px;
+    font-size: 20px;
+    
+}
+
+strong{
+    color: #ffffff;
+    font-size: 25px;
+
+}
+
+/*formulaire*/
+.hamac{
+    background-image: url(../IMG/fond\ formulaire.jpeg);
+    background-size: cover;
+
+}
+input{
+    padding-left: 15px;
+}
+textarea{
+    padding-left: 15px;
+    padding-top: 15px;
+}
+.gridFormulaire{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 1fr 1fr 1fr;
+    grid-template-rows: 40px 40px 40px 40px 300px 40px;
+    row-gap: 25px;
+    column-gap: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    width: 1010px;
+    height: auto;
+    margin-top: 30px;
+
+}
+
+.nom{
+    grid-column-start: 4;
+    grid-row-start: 1;
+}
+
+.prenom{
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
+.adresse{
+    grid-column-start: 4;
+    grid-column-end: span6;
+    grid-row-start: 3;
+
+}
+.telephone{
+    grid-column-start: 5;
+    grid-column-end: span6;
+    grid-row-start: 1;
+}
+.mail{
+    grid-column-start: 5;
+    grid-column-end: span6;
+    grid-row-start: 2;
+}
+.codepostal{
+    grid-column-start: 4;
+    grid-row-start: 4;
+}
+.ville{
+    grid-column-start: 5;
+    grid-column-end: span6;
+    grid-row-start: 4;
+}
+.demande{
+    grid-column-start: 4;
+    grid-column-end: span6;
+    grid-row-start: 5;
+}
+.envoyer{
+    grid-column-start: 6;
+    grid-column-end: span6;
+    grid-row-start: 6;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 #footer {
@@ -158,96 +360,360 @@ form {
     align-content: center;
 }
 
-/*formulaire*/
 
-form{
-    height: 800px;
-    display: flex;
-    flex-wrap: wrap ;
-    /* margin: 50px; */
+@media screen and (max-width: 680px){
+    body {background-color: aqua;}
+    #header {
+        height: 170px;
+        align-items: center;
+    }
 
-}
-#hamac {
+    .nav {
+        display: none;
+    }
+
+    nav {
+        height: 40px;
+    }
+
+    header img {
+        width: 100px;
+        height: 100px;
+        padding: 13px;
+    }
+
+    header div {
+        text-align: center;
+        font-size: 23px;
+
+    }
+
+    #JohnCook {
+        margin-bottom: 0;
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+
+    #Photographe {
+        color: #4b4b4b;
+        margin: 0;
+        margin-left: 25px;
+        font-size: smaller;
+    }
+
+    #social {
+        display: none;
+    }
+
+    #socialBurger {
+        display: inline-block;
+        position: relative;
+        bottom: 18px;
+        left: 280px;
+        width: 30%;
+    }
+
+    #socialBurger img {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Menu Burger */
+    #BurgerResponsive {
+        display: block;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+
+        /* make it look decent enough */
+        background: #232323;
+        color: #cdcdcd;
+        font-family: "Avenir Next", "Avenir", sans-serif;
+    }
+
+    #menuToggle {
+        display: block;
+        position: relative;
+        width: 40%;
+        top: 8px;
+        left: 40px;
+
+        z-index: 1;
+
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    #menuToggle a {
+        text-decoration: none;
+        color: #232323;
+
+        transition: color 0.3s ease;
+    }
+
+    #menuToggle a:hover {
+        color: tomato;
+    }
+
+
+    #menuToggle input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -10px;
+        left: -14px;
+
+        cursor: pointer;
+
+        opacity: 0;
+        /* hide this */
+        z-index: 2;
+        /* and place it over the hamburger */
+
+        -webkit-touch-callout: none;
+    }
+
+    /*
+  * Just a quick hamburger
+  */
+    #menuToggle span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+
+        background: #cdcdcd;
+        border-radius: 3px;
+
+        z-index: 1;
+
+        transform-origin: 4px 0px;
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    /* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+    #menuToggle input:checked~span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #232323;
+    }
+
+    /*
+  * But let's hide the middle one.
+  */
+    #menuToggle input:checked~span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+  * Ohyeah and the last one should go the other direction
+  */
+    #menuToggle input:checked~span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+    #menu {
+        position: absolute;
+        width: 100px;
+
+        margin: -35px 0 0 -50px;
+        padding: 50px;
+        padding-top: 60px;
+        padding-left: 80px;
+
+        background: #edededad;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+
+    #menu li {
+        padding: 10px 0;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    /*
+  * And let's slide it in from the left
+  */
+    #menuToggle input:checked~ul {
+        transform: none;
+    }
+
+@media screen and (max-width: 480px){
+    *, ::before, ::after {
+        box-sizing: border-box;
+        /* margin: 0;
+        padding: 0; */
+    }
+
+    .grille1 {
+        max-width: 480px;
+        width: 80%;
+        height: auto;
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 350px);
+        justify-content: center;
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+
+    .grid-item1 {
+            width: 350px;
+            height: 300px;
+            background-image: url(../IMG/PhotoArtiste.jpeg);
+            background-size: cover;
+            color: #ffffff;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-top: 5px;
+    }
+
+    .grid-item2 {
+        width: 350px;
+        height: 100px;
+        background: #000000;
+        color: #949494;
+        padding: 0px;
+        font-size: 10px;
+        
+    }
+
+    .grid-item3 {
+        width: 350px;
+        height: 170px;
+        background: #000000;
+        color: #949494;
+        padding-top: 5px;
+        font-size: 10px;
+        
+    }
+    
+    .grid-item4 {
+        width: 350px;
+        height: 600px;
+        background-image: url(../IMG/oldman.jpg);
+        background-size: cover;
+        color: #ffffff;
+        font-size: 15px;
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+    
+    .grid-item5 {
+        width: 350px;
+        height: 300px;
+        background-image: url(../IMG/papillons2.jpg);
+        background-size: cover;
+        color: #ffffff;
+        font-size: 15px;
+        padding-left: 10px;
+        padding-top: 5px;
+        
+    }
+    
+    .grid-item6 {
+        width: 350px;
+        height: 120px;
+        background: #000000;
+        color: #949494;
+        padding: 0px;
+        font-size: 10px;
+    
+    }
+    
+    .taillePolice {
+    font-size: 20px;
+    }
+
+    .grille2 {
+        max-width: 480px;
+        width: 80%;
+        height: auto;
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 350px);
+        justify-content: center;
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+
+    .grid-item7 {
+        width: 350px;
+        height: 100px;
+        background-image: url(../IMG/mariage.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #ffffff;
+        font-size: 15px;
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+
+    .grid-item8 {
+        width: 350px;
+        height: 300px;
+        background: #000000;
+        color: #949494;
+        padding-top: 5px;
+        font-size: 10px;
+        
+    }
+    .taillePolice2 {
+        font-size: 15px;
+        }
+        /*formulaire*/
+.hamac{
     background-image: url(../IMG/fond\ formulaire.jpeg);
     background-size: cover;
 
 }
-
-.nom{
-    
-    width: 350px;
-    height: 40px;
-    margin-top: 75px;
-    margin-left: 95px;
-    
-}
-
-.telephone{
-    width: 870px;
-    height: 40px;
-    margin-top: 75px;
-    margin-left: 60px;
-    
-}
-
-.prenom{
-    width: 350px;
-    height: 40px;
-    margin-top: 5px;
-    margin-left: 95px;
-    
-}
-
-.mail{
-    width: 870px;
-    height: 40px;
-    margin-top: 5px;
-    margin-left: 60px;
-
-}
-
-.adresse{
-    width: 1300px;
-    height: 40px;
-    margin-top: 5px;
-    margin-left: 95px;
-
-}
-
-.codePostal{
-    width: 350px;
-    height: 40px;
-    margin-top: 5px;
-    margin-left: 95px;
-}
-
-.ville{
-    width: 865px;
-    height: 40px;
-    margin-top: 5px;
-    margin-left: 60px;
-
-}
-
-.demande{
-    margin-top: 5px;
-    margin-left: 800px;
-    padding: 20px;
-
-}
-
-.bouton{
-    width: 140px;
-    height: 40px;
-    margin-top: 30px;
-    margin-left: 1280px;
-    margin-bottom: 5px;
-    background-color: #535353;
-    border-radius: 20px;
-    color: #ffffff;
-
-}
-
 input{
-    padding-left: 20px;
+    padding-left: 15px;
 }
+textarea{
+    padding-left: 15px;
+    padding-top: 15px;
+}
+.gridFormulaire{
+    display: block;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    width: 350px;
+    height: auto;
+    margin-top: 15px;
+    }
+        
+}
+    
